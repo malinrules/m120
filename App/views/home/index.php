@@ -1,26 +1,45 @@
-
-<?php 
-echo '<div style="padding: 10px;"';
-echo '<form>';
-echo '<div class="form-row">';
-echo '<div class="col">';
-
-echo '<div class="dropdown">';
-echo '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-echo  'Dropdown button';
-echo '</button>';
-echo '<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">';
-echo   '<a class="dropdown-item" href="#">Action</a>';
-echo   '<a class="dropdown-item" href="#">Another action</a>';
-echo   '<a class="dropdown-item" href="#">Something else here</a>';
-echo  '</div>';
-echo '</div>';
-echo '</div>';
-echo '<div class="col">';
-echo  '<input type="text" class="form-control" placeholder="Last name">';
-echo' </div>';
-echo '</div>';
-echo '<button style="margin-top: 10px;" type="submit" class="btn btn-primary">Submit</button>';
-echo '</form>';
-echo '</div>';
-?>
+<div class="container-fluid">
+            <h1> Willkommen! Wo soll es heute hingehen? </h1>
+            <hr>
+            <form action="action.php" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-5">
+            <label for="startingPoint">Start</label>
+            <select name ="startingPoint" id="startingPoint" class="form-control">
+                <option val="" selected disabled>Wählen Sie Ihren Abfahrtsort</option>
+                <option val="kr">Kreuzlingen</option>
+                <option val="fr">Frauenfeld</option>
+                <option val="rn">Romanshorn</option>
+            </select>
+            </div>
+            <div class="form-group col-md-2">
+            icon
+            </div>
+            <div class="form-group col-md-5">
+            <label for="endPoint">Ziel</label>
+            <select name="endPoint" id="endPoint" class="form-control">
+                <option val="" selected disabled>Wählen Sie Ihren Zielort</option>
+                <option val="kr">Kreuzlingen</option>
+                <option val="fr">Frauenfeld</option>
+                <option val="rn">Romanshorn</option>
+            </select>
+            </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="travelDate">Datum</label>
+            <input name="travelDate" type="date" class="form-control" id="travelDate" placeholder="21.04.2020">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="travelTime">Zeit</label>
+            <input name="travelTime" type="time" class="form-control" id="travelTime" placeholder="14:00">
+        </div>
+        <div class="form-group col-md-3">
+           
+        </div>
+            <div class="form-group col-md-3">
+            <button style="margin-top:25px;" type="submit" class="btn btn-lg btn-success btn-block">Verbindung suchen</button>
+            </div>
+        </div>
+        </form>
+        </div>
