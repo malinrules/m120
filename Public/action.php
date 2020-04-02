@@ -1,6 +1,11 @@
 
 <?php 
 
+if(isset($_POST)){
+    
+    $instance = new action();
+    $instance->streckePreis($_POST['startingPoint'],$_POST['endPoint']);
+}
 class action {
     public $start; 
     public $end;
@@ -10,27 +15,27 @@ class action {
         echo htmlspecialchars($_POST['startingPoint']); 
     }
     function streckePreis($astart, $aend){
-        if($astart == "kr" && $aend == "kr"){
+        
+        if($astart == "Kreuzlingen" && $aend == "Kreuzlingen"){
             echo 'Fehler, bitte wählen Sie eine andere Strecke';
-        } elseif($astart =="kr" && $aend =="fr"){
+        } elseif($astart =="Kreuzlingen" && $aend =="Frauenfeld" || $astart =="Frauenfeld"&& $aend =="Kreuzlingen"){
             $price = 10;
             echo $price;
             echo ".Fr";
-        } elseif($astart =="kr" && $aend =="rn"){
+        } elseif($astart =="Kreuzlingen" && $aend =="Romanshorn" || $astart =="Romanshorn"&& $aend =="Kreuzlingen"){
             $price = 8;
             echo $price;
             echo ".Fr";
-        } elseif($astart =="fr" && $aend =="rn"){
+        } elseif($astart =="Frauenfeld" && $aend =="Romanshorn" || $astart =="Romanshorn"&& $aend =="Frauenfeld"){
             $price = 15;
             echo $price;
             echo ".Fr";
-        } elseif($astart =="fr" && $aend =="fr"){
+        } elseif($astart =="Frauenfeld" && $aend =="Frauenfeld"){
             echo 'Fehler, bitte wählen Sie eine andere Strecke';
-        } elseif($astart =="rn" && $aend =="rn"){
+        } elseif($astart =="Romanshorn" && $aend =="Romanshorn"){
             echo 'Fehler, bitte wählen Sie eine andere Strecke';
         } 
     }
-    test();
     //streckePreis( $_GET['startingPoint'],$_GET['endPoint']);
 }
 

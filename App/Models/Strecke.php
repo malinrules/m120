@@ -1,29 +1,41 @@
 
-<?php echo htmlspecialchars($_POST['startingPoint']); ?>
-<?php echo $_POST['endPoint']; ?> 
 <?php 
 
-class Strecke 
-{
+if(isset($_POST)){
+    
+    $instance = new Strecke();
+    $instance->streckePreis($_POST['startingPoint'],$_POST['endPoint']);
+}
+class Strecke {
     public $start; 
     public $end;
     public $price;
 
+    public function test(){
+        echo htmlspecialchars($_POST['startingPoint']); 
+    }
     function streckePreis($astart, $aend){
-        if($astart == "kr" && $aend == "kr"){
+        
+        if($astart == "Kreuzlingen" && $aend == "Kreuzlingen"){
             echo 'Fehler, bitte wählen Sie eine andere Strecke';
-        } elseif($astart =="kr" && $aend =="fr"){
+        } elseif($astart =="Kreuzlingen" && $aend =="Frauenfeld" || $astart =="Frauenfeld"&& $aend =="Kreuzlingen"){
             $price = 10;
-        } elseif($astart =="kr" && $aend =="rn"){
+            echo $price;
+            echo ".Fr";
+        } elseif($astart =="Kreuzlingen" && $aend =="Romanshorn" || $astart =="Romanshorn"&& $aend =="Kreuzlingen"){
             $price = 8;
-        } elseif($astart =="fr" && $aend =="rn"){
+            echo $price;
+            echo ".Fr";
+        } elseif($astart =="Frauenfeld" && $aend =="Romanshorn" || $astart =="Romanshorn"&& $aend =="Frauenfeld"){
             $price = 15;
-        } elseif($astart =="fr" && $aend =="fr"){
+            echo $price;
+            echo ".Fr";
+        } elseif($astart =="Frauenfeld" && $aend =="Frauenfeld"){
             echo 'Fehler, bitte wählen Sie eine andere Strecke';
-        } elseif($astart =="rn" && $aend =="rn"){
+        } elseif($astart =="Romanshorn" && $aend =="Romanshorn"){
             echo 'Fehler, bitte wählen Sie eine andere Strecke';
         } 
     }
 }
 
-?>
+    ?> 
