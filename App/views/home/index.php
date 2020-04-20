@@ -1,7 +1,7 @@
 <div class="container-fluid">
             <h1> Willkommen! Wo soll es heute hingehen? </h1>
             <hr>
-            <form action="preise.php" method="post">
+            <form action="prices.php" method="post">
         <div class="form-row">
             <div class="form-group col-md-5">
             <label for="startingPoint">Start</label>
