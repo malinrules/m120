@@ -1,7 +1,23 @@
 <div class="container-fluid">
             <h1> Willkommen! Wo soll es heute hingehen? </h1>
             <hr>
-            <form action="form/calculate(startingPoint,endPoint)" method="post">
+            <div class="container-fluid">
+            <h1> Willkommen! Tragen Sie sich hier für unseren Newsletter ein</h1>
+            <hr>
+            <form action="test/sendNews" method="POST">
+        <div class="form-row">
+            <div class="form-group col-md-5">
+            <label for="mail">E-Mail</label>
+            <input type="text" name="mail" placeholder="me@mail.com" class="form-control">
+            </div>
+           
+            <div class="form-group col-md-3">
+            <button style="margin-top:25px;" type="submit" class="btn btn-lg btn-success btn-block">Jetzt anmelden</button>
+            </div>
+        </div>
+        </form>
+</div>
+            <form action="form/calculate" method="post">
         <div class="form-row">
             <div class="form-group col-md-5">
             <label for="startingPoint">Start</label>
@@ -43,3 +59,4 @@
         </div>
         </form>
         </div>
+    

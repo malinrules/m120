@@ -10,8 +10,8 @@ class Form extends Controller {
         $this->view('home/prices');
        
             }
-    public function calculate($from="startingPoint", $to="endingPoint") {
+    public function calculate() {
     
-    
+    $_POST// parameter sind im post array [] -> wie rausbekommen?
     }
 }
