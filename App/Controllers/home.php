@@ -14,33 +14,44 @@ class Home extends Controller {
         $this->view('home/index', ['name' => $user->name]);
 
         $this->goto('home', 'newsletter');
+        
     }
 
 
     
     public function newsletter(){
     //schauen ob ein post vorhanden 
-    if(isset($_POST['Email'])){
-        $file = fopen('liste.txt', 'a+');
+    if( !empty($_POST['mail']) && !empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['town']) && !empty($_POST['street'])){     //isset = prüft ob eine variable existiert / nicht NULL
+        $file = fopen('liste.txt', 'a+');       //fopen -> öffnet datei   a+ zum schreiben und lesen 
 
-        //schauen ob mail schon registriert
+        //schauen ob mail schon registriert 
         $write = true;
-        while(!feof($file)){
-                if(trim(fgets($file)) == $_POST['Email']){
+        $lines = file('d:\liste.txt');
+        foreach($lines as $line)
+        {
+            if(strpos($line, $searchstr) )
+        }
+        while(!feof($file)){    //feof prüft ob ein Dateizeiger am Ende der Datei steht
+                if(trim(fgets($file)) == $_POST['mail']){  //trim entfernt whitespace  fgets liest die zeile von der Position des Dateizeigers
                     $write = false;
                 }
         }
 
         // fehler meldung oder mail in file schreiben
         if($write == true){
-            fwrite($file, $_POST['Email']."\n");
-            echo $_POST['Email'].' wurde für Sie erfasst';
+            fwrite($file, $_POST['mail']." ");
+            fwrite($file, $_POST['firstname']." ");
+            fwrite($file, $_POST['lastname']." ");
+            fwrite($file, $_POST['town']." ");
+            fwrite($file, $_POST['street']."\n");
+            echo $_POST['mail'].' wurde für Sie erfasst';
         }else{
-            echo $_POST['Email'].' wurde bereits erfasst';
+            echo $_POST['mail'].' wurde bereits erfasst';
         }
 
+    } else {
+        echo 'bitte füllen sie das formular ganz aus';
     }
-
     $this->view('home/newsletter');
     }
 }
