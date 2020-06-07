@@ -1,7 +1,9 @@
+
 <html>
     
     <body class="bg-dark text-white">
-
+<?php
+    echo '
         <div class="container-fluid">
             <h1> Preisberechnung: </h1>
             <hr>
@@ -9,11 +11,14 @@
                 <div class="col-6">
                     <div class="container">
                     <div class="row">
-                        <form action="submit">
-                          
-                        </form>
-                    </div>
-                    <button type="button" class="btn btn-lg btn-block btn-success">Preis neu berechnen</button>
+                        <div class="w-100">
+                            <h1>Ihre Verbindung:</h1>
+                        </div>
+                        <div class="w-100">
+                            <h3> Von '.$data['start'].' Nach '.$data['end'].'</h3>
+                        </div>
+                   </div>
+                   <!--  <button type="button" class="btn btn-lg btn-block btn-success">Zurück</button>-->
                     </div>
                 </div>
                 <div class="col-6">
@@ -23,10 +28,10 @@
                              <h1>Ihr Ticket:</h1>
                             </div>
                             <div class="w-100">
-                             <h3>Kreuzlingen -> Frauenfeld</h3>
+                             <h3> '.$data['start'].'-> '.$data['end'].'</h3>
                             </div>
                             <div class="w-100">
-                             <h5>2.Klasse</h5>
+                             <h5>'.$data['class'].'</h5>
                             </div>
                             <div class="w-100">
                              <h4>1 Einzelbillett</h4> <!-- 1 muss variabel sein-->
@@ -35,7 +40,7 @@
                              <h4>Kein Abo/Vergünstigung</h4> <!--  muss variabel sein-->
                             </div>
                             <div class="w-100">
-                             <h5>Gültig: {{Date}}</h5>
+                             <h5>Gültig: '.$data['date']." ".$data['time'].'</h5>
                             </div>
                             <div class="w-100">
                              <h5>2 Stunden</h5>
@@ -44,7 +49,7 @@
                                 <div class="row">
                                     <div class="col-6">
                                     <h2>Gesamtpreis: </h2>
-                                    <h2>CHF 7.20 </h2>
+                                    <h2>CHF '.$data['price'].'</h2>
                                     </div>
                                     <div class="col-2">
                                     
@@ -70,7 +75,8 @@
                 </div>
             </div>
             </div> -->
-        </div>
+        </div>';
+        ?>
     </body>
     <style>
     .container {

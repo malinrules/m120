@@ -1,5 +1,8 @@
-<?php 
-class User {
+<?php
+
+class User 
+{
     public $name;
 }
+
 ?>

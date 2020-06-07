@@ -1,0 +1,3 @@
+muster@max.de;Max;Muster;Ort;Strasse
+hein@rich.com;Hein;Rich;Ort;Street
+mail@mail.com;some;one;klkljsd;abx

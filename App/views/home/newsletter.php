@@ -3,7 +3,7 @@
         <br>
             <h1> Willkommen! Tragen Sie sich hier für unseren Newsletter ein</h1>
             <hr>
-            <form action="newsletter//MVC_Test/public/home/newsletter" method="POST">
+            <form action="/MVC_Test/public/home/newsletter" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="firstname">Vorname</label>
@@ -36,3 +36,6 @@
         </div>
         </form>
 </div>
+
+
+
