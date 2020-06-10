@@ -1,11 +1,5 @@
 
 <?php 
-
-if(isset($_POST)){
-    
-    $instance = new Strecke();
-    
-}
 class Strecke {
     public $start;
     public $end;

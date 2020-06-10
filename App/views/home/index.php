@@ -31,10 +31,6 @@
             <label for="travelDate">Datum</label>
             <input name="travelDate" type="date" class="form-control" id="travelDate" >
         </div>
-        <div class="form-group col-md-4">
-            <label for="travelTime">Zeit</label>
-            <input name="travelTime" type="time" class="form-control" id="travelTime">
-        </div>
         </div>
         <hr>
         <h2>Reisedetails</h2>
@@ -43,17 +39,17 @@
                 <label for="class">Klasse</label>
                 <select name="class" id="class" class="form-control">
                     <option selected disabled>Wie wollen Sie reisen?</option>
-                    <option>1. Klasse</option>
-                    <option>2. Klasse</option>
+                    <option>1.Klasse</option>
+                    <option>2.Klasse</option>
                 </select>
             </div>
             <div class="form-group col-md-3">
                 <label for="people">Anzahl Erwachsener</label>
-                <input name="people" type="number" class="form-control" id="people" placeholde="0">
+                <input name="people" type="number" class="form-control" id="people" placeholder="0" >
             </div>
             <div class="form-group col-md-5">
-                <label for="others">Anzahl Kinder/Senioren(65+)/Hunde</label>
-                <input name="others" type="number" class="form-control" id="others" placeholde="0">
+                <label for="others">Anzahl Senioren(65+)/Kinder/Hunde (-25%)</label>
+                <input name="others" type="number" class="form-control" id="others" placeholder="0" value="0">
             </div>
            
         </div>
@@ -61,15 +57,23 @@
         <h2>Ticket-Art</h2>
         <div class="form-row">
             <hr>
-            <div class="form-group col-md-3">
-                <input type="radio" id="oneway" name="type" value="oneway">
-                <label for="oneway"> Einzelbillet</label> 
-                <br>
-                <input type="radio" id="twoway" name="type" value="twoway">
-                <label for="twoway"> Hin- und Zurück</label>
-                <br>
-                <input type="radio" id="serial" name="type" value="serial">
-                <label for="serial">Zehnerkarte</label> 
+            <div class="form-group col-md-5">
+                <label for="times">Billet-Art</label>
+                <select name="times" id="times" class="form-control">
+                    <option value="Einzelbillet">Einzelbillet</option>
+                    <option value="Hin und Zurück">Hin- und Zurück</option>
+                    <option value="Zehnerkarte">Zehnerkarte</option>
+                </select>
+            </div>
+            <div class="form-group col-md-5">
+            <label for="reduction">Vegünstigungen</label>
+                <select name="reduction" id="reduction" class="form-control">
+                    <option value="Keine" >Keine</option>
+                    <option value="Halbtax">Halbtax</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+            </div>
             </div>
         </div>
         </div>

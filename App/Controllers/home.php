@@ -19,7 +19,7 @@ class Home extends Controller {
         
     }
 
-
+/*
     public function replacemail($oldmail, $newmail) {
         
         // read the entire file
@@ -34,7 +34,7 @@ class Home extends Controller {
         // go back to newsletter
         //$this->goto('home', 'newsletter');
     }
-  
+  /*
     public function newsletter() {
 
         // check if form was sent
@@ -102,7 +102,7 @@ class Home extends Controller {
     
         $this->view('home/delete');
         
-    }
+    }*/
 
     
 

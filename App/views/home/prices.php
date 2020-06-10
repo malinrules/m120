@@ -5,83 +5,64 @@
 <?php
     echo '
         <div class="container-fluid">
-            <h1> Preisberechnung: </h1>
+            <h1>Ihr Ticket: </h1>
             <hr>
-            <div class="row">
-                <div class="col-6">
-                    <div class="container">
-                    <div class="row">
-                        <div class="w-100">
-                            <h1>Ihre Verbindung:</h1>
-                        </div>
-                        <div class="w-100">
-                            <h3> Von '.$data['start'].' Nach '.$data['end'].'</h3>
-                        </div>
-                   </div>
-                   <!--  <button type="button" class="btn btn-lg btn-block btn-success">Zurück</button>-->
-                    </div>
-                </div>
-                <div class="col-6">
+                <div>
                     <div class="container outline">
                         <div class="row">
-                            <div class="w-100">
-                             <h1>Ihr Ticket:</h1>
+                            <div class="col-6">
+                             <h1>'.$data['start'].' -> '.$data['end'].'</h1>
                             </div>
-                            <div class="w-100">
-                             <h3> '.$data['start'].'-> '.$data['end'].'</h3>
+                            <div class="col-6">
+                             <h3>'.$data['class'].'</h3>
                             </div>
-                            <div class="w-100">
-                             <h5>'.$data['class'].'</h5>
+                            <div class="col-12">
+                            <hr>
                             </div>
-                            <div class="w-100">
-                             <h4>1 Einzelbillett</h4> <!-- 1 muss variabel sein-->
+                            <div class="col-4">
+                             <h4>'.$data['times'].': '.$data['people'].' </h4> 
                             </div>
-                            <div class="w-100">
-                             <h4>Kein Abo/Vergünstigung</h4> <!--  muss variabel sein-->
+                            <div class="col-4">
+                             <h4>Senioren/Kinder/Hunde: '.$data['others'].'</h4> 
                             </div>
-                            <div class="w-100">
-                             <h5>Gültig: '.$data['date']." ".$data['time'].'</h5>
+                            <div class="col-4">
+                             <h4>Vergünstigungen: '.$data['reduction'].'</h4> 
                             </div>
-                            <div class="w-100">
-                             <h5>2 Stunden</h5>
+                            <div class="col-12">
+                            <hr>
                             </div>
-                            <div class="container outline-sm">
+                            <div class="col-12">
+                             <h4> Gültig am/ab: '.$data['date'].'</h4>
+                            </div>
+                            <div class="col-12">
+                            <hr>
+                            </div>
+                            <div class="container ">
                                 <div class="row">
                                     <div class="col-6">
-                                    <h2>Gesamtpreis: </h2>
-                                    <h2>CHF '.$data['price'].'</h2>
-                                    </div>
-                                    <div class="col-2">
-                                    
+                                    <h1>Gesamtpreis: CHF '.$data['price'].'</h1>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12">
+                            <hr>
+                            </div>
+                            <div class="col-4">
+                            <button type="button" class="btn btn-lg btn-block btn-success" disabled>Bezahlen</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-           <!-- <div class="row">
-                <div class="col-8">
-                <h4> Regulärer Preis : 10 CHF </h4>
-                </div>
-                <div class="col-4">
-                <button type="button" class="btn btn-lg btn-block btn-success">Bezahlen</button>
-                </div>
-                <hr>
-                <div class="w-100"></div>
-            <div class="row">
-                <div class="col-4">
-                <h1> Optionen: </h1>
-                </div>
-            </div>
-            </div> -->
         </div>';
         ?>
     </body>
     <style>
     .container {
         margin: 0px;
+        width:100vw;
+        vertical-align: bottom;
     }
+    /*
     .outline {
         border: 1px solid #515557;
     }
@@ -105,6 +86,6 @@
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #515557;
-    }
+    }*/
     </style>
 </html>
