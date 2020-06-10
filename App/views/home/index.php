@@ -78,7 +78,7 @@
         </div>
         </div>
             <div class="form-group col-md-10">
-            <button style="margin-top:25px;" type="submit" class="btn btn-lg btn-success btn-block">Verbindung suchen</button>
+            <button style="margin-top:25px;" type="submit" class="btn btn-lg btn-success btn-block">Preis berechnen</button>
          </div>
         </form>
         </div>
