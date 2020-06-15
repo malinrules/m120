@@ -33,6 +33,22 @@ $prices = [
         'From' => 'Kreuzlingen',
         'To' => 'Frauenfeld',
         'Price' => '7.00'
+    ],
+    '7' => [
+        'From' => 'Kreuzlingen',
+        'To' => 'Kreuzlingen',
+        'Price' => '1000000'
+    ],
+    
+    '8' => [
+        'From' => 'Frauenfeld',
+        'To' => 'Frauenfeld',
+        'Price' => '10000000'
+    ],
+    '9' => [
+        'From' => 'Romanshorn',
+        'To' => 'Romanshorn',
+        'Price' => '10000000'
     ]
     ];
     return $prices;
